@@ -13,16 +13,17 @@
         }
 
         :root {
-            --bg: #0f1117;
-            --bg2: #1e2330;
-            --bg3: #252d3d;
-            --text: #e2e8f0;
-            --muted: #94a3b8;
-            --accent: #7c3aed;
-            --accent2: #a78bfa;
-            --green: #22c55e;
-            --orange: #f59e0b;
-            --red: #f87171;
+            --bg: #f8fafc;
+            --bg2: #ffffff;
+            --bg3: #f1f5f9;
+            --text: #1e293b;
+            --muted: #64748b;
+            --accent: #4f46e5;
+            --accent2: #6366f1;
+            --accent-light: #eef2ff;
+            --green: #16a34a;
+            --orange: #d97706;
+            --border: #e2e8f0;
         }
 
         body {
@@ -46,20 +47,20 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 17, 23, 0.95);
+            background: rgba(248, 250, 252, 0.95);
             backdrop-filter: blur(10px);
             padding: 16px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            border-bottom: 1px solid #2d3748;
+            border-bottom: 1px solid var(--border);
         }
 
         .nav-logo {
             font-weight: 700;
             font-size: 16px;
-            color: var(--accent2);
+            color: var(--accent);
         }
 
         .nav-links {
@@ -84,64 +85,84 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             padding: 100px 40px 60px;
         }
 
+        .hero-inner {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-photo {
+            flex-shrink: 0;
+        }
+
+        .hero-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-light);
+            box-shadow: 0 0 0 8px var(--accent-light);
+        }
+
         .hero-content {
-            max-width: 700px;
+            flex: 1;
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(124, 58, 237, 0.15);
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            color: var(--accent2);
+            background: var(--accent-light);
+            border: 1px solid #c7d2fe;
+            color: var(--accent);
             font-size: 13px;
             padding: 6px 16px;
             border-radius: 20px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            color: var(--text);
         }
 
         .hero h1 span {
-            color: var(--accent2);
+            color: var(--accent);
         }
 
         .hero .subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--muted);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .hero .description {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--muted);
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 28px;
+            line-height: 1.7;
         }
 
         .hero-btns {
             display: flex;
-            gap: 12px;
-            justify-content: center;
+            gap: 10px;
             flex-wrap: wrap;
+            margin-bottom: 36px;
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 10px 22px;
             border-radius: 8px;
             font-size: 14px;
             font-weight: 500;
             transition: all 0.2s;
             cursor: pointer;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -151,27 +172,26 @@
         }
 
         .btn-primary:hover {
-            background: #6d28d9;
+            background: #4338ca;
             text-decoration: none;
+            color: white;
         }
 
         .btn-secondary {
-            background: transparent;
+            background: white;
             color: var(--text);
-            border: 1px solid #4a5568;
+            border: 1px solid var(--border);
         }
 
         .btn-secondary:hover {
             border-color: var(--accent2);
-            color: var(--accent2);
+            color: var(--accent);
             text-decoration: none;
         }
 
         .hero-stats {
             display: flex;
-            gap: 32px;
-            justify-content: center;
-            margin-top: 48px;
+            gap: 28px;
             flex-wrap: wrap;
         }
 
@@ -180,15 +200,15 @@
         }
 
         .stat .num {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-            color: var(--accent2);
+            color: var(--accent);
         }
 
         .stat .lbl {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--muted);
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         /* SECTIONS */
@@ -199,47 +219,47 @@
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .section-title span {
-            color: var(--accent2);
+            color: var(--accent);
         }
 
         .section-sub {
             color: var(--muted);
-            font-size: 15px;
-            margin-bottom: 40px;
+            font-size: 14px;
+            margin-bottom: 32px;
         }
 
         .divider {
-            width: 60px;
+            width: 50px;
             height: 3px;
             background: var(--accent);
             border-radius: 2px;
-            margin: 12px 0 40px;
+            margin: 10px 0 32px;
         }
 
         /* PROJETS */
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 18px;
         }
 
         .project-card {
             background: var(--bg2);
-            border: 1px solid #2d3748;
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 24px;
-            transition: border-color 0.2s, transform 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
+            border-color: var(--accent2);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
         }
 
         .project-card.featured {
@@ -254,12 +274,7 @@
         }
 
         .project-icon {
-            font-size: 24px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 8px;
+            font-size: 22px;
         }
 
         .project-link {
@@ -269,39 +284,41 @@
             border-radius: 6px;
             color: var(--muted);
             transition: color 0.2s;
+            border: 1px solid var(--border);
         }
 
         .project-link:hover {
-            color: var(--accent2);
+            color: var(--accent);
             text-decoration: none;
         }
 
         .project-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 600;
             margin-bottom: 8px;
+            color: var(--text);
         }
 
         .project-desc {
             font-size: 14px;
             color: var(--muted);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             line-height: 1.6;
         }
 
         .project-result {
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.2);
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
             border-radius: 8px;
             padding: 10px 14px;
             font-size: 13px;
-            color: #4ade80;
-            margin-bottom: 16px;
+            color: var(--green);
+            margin-bottom: 14px;
         }
 
         .project-result.ongoing {
-            background: rgba(245, 158, 11, 0.1);
-            border-color: rgba(245, 158, 11, 0.2);
+            background: #fffbeb;
+            border-color: #fde68a;
             color: var(--orange);
         }
 
@@ -313,11 +330,10 @@
 
         .tag {
             font-size: 11px;
-            background: var(--bg3);
-            color: var(--muted);
+            background: var(--accent-light);
+            color: var(--accent);
             padding: 3px 10px;
             border-radius: 20px;
-            border: 1px solid #3d4a5c;
         }
 
         /* COMPÉTENCES */
@@ -329,7 +345,7 @@
 
         .skill-card {
             background: var(--bg2);
-            border: 1px solid #2d3748;
+            border: 1px solid var(--border);
             border-radius: 10px;
             padding: 20px;
         }
@@ -337,7 +353,7 @@
         .skill-card h4 {
             font-size: 14px;
             font-weight: 600;
-            color: var(--accent2);
+            color: var(--accent);
             margin-bottom: 12px;
         }
 
@@ -353,6 +369,7 @@
             color: var(--text);
             padding: 4px 10px;
             border-radius: 6px;
+            border: 1px solid var(--border);
         }
 
         .skill-tag.muted {
@@ -363,34 +380,33 @@
         /* EXPÉRIENCES */
         .timeline {
             position: relative;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 32px;
-        }
-
-        .timeline-dot {
-            width: 12px;
-            height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            margin-top: 6px;
-            flex-shrink: 0;
+            padding-left: 24px;
         }
 
         .timeline-line {
             position: absolute;
             left: 5px;
-            top: 18px;
+            top: 8px;
             bottom: 0;
             width: 2px;
-            background: #2d3748;
+            background: var(--border);
         }
 
-        .timeline-content {
-            flex: 1;
+        .timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -23px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px var(--accent);
         }
 
         .timeline-header {
@@ -408,12 +424,16 @@
         .timeline-date {
             font-size: 12px;
             color: var(--muted);
+            background: var(--bg3);
+            padding: 2px 10px;
+            border-radius: 20px;
         }
 
         .timeline-company {
             font-size: 14px;
-            color: var(--accent2);
+            color: var(--accent);
             margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .timeline-desc {
@@ -424,16 +444,23 @@
 
         /* CONTACT */
         .contact-card {
-            background: var(--bg2);
-            border: 1px solid #2d3748;
-            border-radius: 12px;
-            padding: 40px;
+            background: var(--accent);
+            border-radius: 16px;
+            padding: 48px 40px;
             text-align: center;
         }
 
+        .contact-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+
         .contact-card p {
-            color: var(--muted);
-            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 28px;
+            font-size: 15px;
         }
 
         .contact-links {
@@ -447,28 +474,28 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: var(--bg3);
-            border: 1px solid #3d4a5c;
+            background: white;
             padding: 10px 20px;
             border-radius: 8px;
             font-size: 14px;
-            color: var(--text);
-            transition: border-color 0.2s;
+            color: var(--accent);
+            font-weight: 500;
+            transition: transform 0.2s;
         }
 
         .contact-link:hover {
-            border-color: var(--accent2);
+            transform: translateY(-2px);
             text-decoration: none;
-            color: var(--accent2);
+            color: var(--accent);
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 24px;
             color: var(--muted);
             font-size: 13px;
-            border-top: 1px solid #2d3748;
+            border-top: 1px solid var(--border);
         }
 
         /* LIVE DOT */
@@ -495,8 +522,18 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
+            .hero-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 32px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
             }
 
             .projects-grid {
@@ -515,12 +552,12 @@
                 padding: 12px 20px;
             }
 
-            .nav-links {
-                gap: 16px;
-            }
-
             section {
                 padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
             }
         }
     </style>
@@ -541,34 +578,40 @@
 
     <!-- HERO -->
     <div class="hero">
-        <div class="hero-content">
-            <div class="hero-badge"><span class="live-dot"></span>Disponible — Alternance Sept. 2026</div>
-            <h1>Bridget <span>ATSA NANGOU</span></h1>
-            <p class="subtitle">Étudiante Ingénieure | ESIEA | Future spécialisation Cybersécurité</p>
-            <p class="description">Passionnée par la sécurité offensive et défensive, je construis des outils concrets :
-                scanner de vulnérabilités, honeypot SSH, lab firewall. Mobile toute la France.</p>
-            <div class="hero-btns">
-                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                <a href="https://github.com/atsa19" class="btn btn-secondary" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/bridget-atsa-nangou-7109163a3" class="btn btn-secondary"
-                    target="_blank">LinkedIn</a>
+        <div class="hero-inner">
+            <div class="hero-photo">
+                <img src="photo.jpg" alt="Bridget ATSA NANGOU">
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="num">60</div>
-                    <div class="lbl">CVE détectées</div>
+            <div class="hero-content">
+                <div class="hero-badge"><span class="live-dot"></span>Disponible — Alternance Sept. 2026</div>
+                <h1>Bridget <span>ATSA NANGOU</span></h1>
+                <p class="subtitle">Étudiante Ingénieure | ESIEA | Future spécialisation Cybersécurité</p>
+                <p class="description">Passionnée par la sécurité offensive et défensive, je construis des outils
+                    concrets : scanner de vulnérabilités (60 CVE détectées), honeypot SSH, lab firewall pfSense. Mobile
+                    toute la France.</p>
+                <div class="hero-btns">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="https://github.com/atsa19" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/bridget-atsa-nangou-7109163a3" class="btn btn-secondary"
+                        target="_blank">LinkedIn</a>
                 </div>
-                <div class="stat">
-                    <div class="num">2</div>
-                    <div class="lbl">Projets GitHub</div>
-                </div>
-                <div class="stat">
-                    <div class="num">2</div>
-                    <div class="lbl">Stages IT</div>
-                </div>
-                <div class="stat">
-                    <div class="num">24</div>
-                    <div class="lbl">Mois d'alternance</div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="num">60</div>
+                        <div class="lbl">CVE détectées</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">2</div>
+                        <div class="lbl">Projets GitHub</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">2</div>
+                        <div class="lbl">Stages IT</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">24</div>
+                        <div class="lbl">Mois d'alternance</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -580,69 +623,52 @@
         <div class="divider"></div>
         <p class="section-sub">Des outils concrets développés en dehors des cours pour prouver ma motivation</p>
         <div class="projects-grid">
-
             <div class="project-card featured">
                 <div class="project-header">
                     <span class="project-icon">🔍</span>
-                    <div class="project-links">
-                        <a href="https://github.com/atsa19/vulnerability-scanner" class="project-link"
-                            target="_blank">GitHub →</a>
-                    </div>
+                    <a href="https://github.com/atsa19/vulnerability-scanner" class="project-link"
+                        target="_blank">GitHub →</a>
                 </div>
                 <div class="project-title">VulnScanner — Scanner de vulnérabilités réseau</div>
                 <div class="project-desc">Outil CLI automatisé détectant les CVE sur des cibles réseau via l'API
-                    officielle NVD/NIST. Scoring de risque CVSS (0-100) et génération automatique de rapports HTML dark
-                    mode.</div>
+                    officielle NVD/NIST. Scoring de risque CVSS (0-100) et génération automatique de rapports HTML.
+                </div>
                 <div class="project-result">✅ 60 CVE détectées sur Metasploitable2 — 3 Critical, 25 High — Score de
                     risque 100/100</div>
                 <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Nmap</span>
-                    <span class="tag">API NVD/NIST</span>
-                    <span class="tag">SQLite</span>
-                    <span class="tag">Flask</span>
-                    <span class="tag">Jinja2</span>
-                    <span class="tag">CVE/CVSS</span>
+                    <span class="tag">Python</span><span class="tag">Nmap</span><span class="tag">API
+                        NVD/NIST</span><span class="tag">SQLite</span><span class="tag">Flask</span><span
+                        class="tag">Jinja2</span>
                 </div>
             </div>
-
             <div class="project-card">
                 <div class="project-header">
                     <span class="project-icon">🍯</span>
-                    <div class="project-links">
-                        <a href="https://github.com/atsa19/honeypot" class="project-link" target="_blank">GitHub →</a>
-                    </div>
+                    <a href="https://github.com/atsa19/honeypot" class="project-link" target="_blank">GitHub →</a>
                 </div>
                 <div class="project-title">SSH Honeypot</div>
                 <div class="project-desc">Faux serveur SSH capturant les tentatives d'intrusion en temps réel. Dashboard
-                    web avec graphiques et statistiques d'attaque.</div>
+                    web Flask avec graphiques Chart.js et actualisation automatique.</div>
                 <div class="project-result">✅ Capture de tentatives réelles avec visualisation live des patterns
                     d'attaque</div>
                 <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Paramiko</span>
-                    <span class="tag">Flask</span>
-                    <span class="tag">SQLite</span>
-                    <span class="tag">Chart.js</span>
+                    <span class="tag">Python</span><span class="tag">Paramiko</span><span class="tag">Flask</span><span
+                        class="tag">SQLite</span><span class="tag">Chart.js</span>
                 </div>
             </div>
-
             <div class="project-card">
                 <div class="project-header">
                     <span class="project-icon">🔥</span>
                 </div>
                 <div class="project-title">Lab Sécurité Réseaux & Firewall</div>
                 <div class="project-desc">Simulation d'architecture réseau d'entreprise sécurisée. Segmentation
-                    LAN/DMZ/WAN, règles de filtrage et analyse de trafic.</div>
-                <div class="project-result ongoing">🔥 En cours — pfSense · VirtualBox · Wireshark</div>
+                    LAN/DMZ/WAN, règles de filtrage et analyse de trafic Wireshark.</div>
+                <div class="project-result ongoing">🔥 En cours — Architecture fonctionnelle avec pfSense</div>
                 <div class="tags">
-                    <span class="tag">pfSense</span>
-                    <span class="tag">VirtualBox</span>
-                    <span class="tag">Wireshark</span>
-                    <span class="tag">LAN/DMZ/WAN</span>
+                    <span class="tag">pfSense</span><span class="tag">VirtualBox</span><span
+                        class="tag">Wireshark</span><span class="tag">LAN/DMZ/WAN</span>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -654,50 +680,36 @@
             <div class="skill-card">
                 <h4>🛡️ Cybersécurité</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag">CVE/CVSS</span>
-                    <span class="skill-tag">Honeypot</span>
-                    <span class="skill-tag">Analyse de vulnérabilités</span>
-                    <span class="skill-tag">API NVD/NIST</span>
-                    <span class="skill-tag muted">SOC (notions)</span>
-                    <span class="skill-tag muted">SIEM (notions)</span>
-                    <span class="skill-tag muted">Forensic (notions)</span>
+                    <span class="skill-tag">CVE/CVSS</span><span class="skill-tag">Honeypot</span><span
+                        class="skill-tag">Analyse de vulnérabilités</span><span class="skill-tag">API NVD/NIST</span>
+                    <span class="skill-tag muted">SOC (notions)</span><span class="skill-tag muted">SIEM
+                        (notions)</span><span class="skill-tag muted">Forensic (notions)</span>
                 </div>
             </div>
             <div class="skill-card">
                 <h4>🌐 Réseaux & Systèmes</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag">TCP/IP</span>
-                    <span class="skill-tag">LAN/WAN</span>
-                    <span class="skill-tag">Routage</span>
-                    <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">Windows</span>
-                    <span class="skill-tag">Wireshark</span>
-                    <span class="skill-tag">Nmap</span>
-                    <span class="skill-tag">pfSense</span>
-                    <span class="skill-tag">Packet Tracer</span>
+                    <span class="skill-tag">TCP/IP</span><span class="skill-tag">LAN/WAN</span><span
+                        class="skill-tag">Routage</span><span class="skill-tag">Linux</span><span
+                        class="skill-tag">Windows</span><span class="skill-tag">Wireshark</span><span
+                        class="skill-tag">Nmap</span><span class="skill-tag">pfSense</span>
                 </div>
             </div>
             <div class="skill-card">
                 <h4>💻 Développement</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">Jinja2</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">PowerShell</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Python</span><span class="skill-tag">Flask</span><span
+                        class="skill-tag">SQLite</span><span class="skill-tag">Jinja2</span><span
+                        class="skill-tag">Java</span><span class="skill-tag">PowerShell</span><span
+                        class="skill-tag">SQL</span><span class="skill-tag">Git</span>
                 </div>
             </div>
             <div class="skill-card">
                 <h4>📋 Gouvernance</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag muted">RGPD (notions)</span>
-                    <span class="skill-tag muted">NIS2 (notions)</span>
-                    <span class="skill-tag muted">DORA (notions)</span>
-                    <span class="skill-tag muted">EBIOS (notions)</span>
-                    <span class="skill-tag muted">Gestion de projet</span>
+                    <span class="skill-tag muted">RGPD (notions)</span><span class="skill-tag muted">NIS2
+                        (notions)</span><span class="skill-tag muted">DORA (notions)</span><span
+                        class="skill-tag muted">EBIOS (notions)</span>
                 </div>
             </div>
         </div>
@@ -711,38 +723,33 @@
             <div class="timeline-line"></div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-title">Stagiaire Cybersécurité & Conformité</div>
-                        <div class="timeline-date">Juin – Août 2025</div>
-                    </div>
-                    <div class="timeline-company">ANTIC — Agence Nationale des TIC · Yaoundé</div>
-                    <div class="timeline-desc">Vérification et contrôle des systèmes, sensibilisation aux bonnes
-                        pratiques cyber, cryptographie appliquée et diagnostic réseaux. Création de supports de
-                        sensibilisation déployés auprès des collaborateurs.</div>
+                <div class="timeline-header">
+                    <div class="timeline-title">Stagiaire Cybersécurité & Conformité</div>
+                    <div class="timeline-date">Juin – Août 2025</div>
                 </div>
+                <div class="timeline-company">ANTIC — Agence Nationale des TIC · Yaoundé</div>
+                <div class="timeline-desc">Vérification et contrôle des systèmes, sensibilisation aux bonnes pratiques
+                    cyber, cryptographie appliquée et diagnostic réseaux. Création de supports de sensibilisation
+                    déployés auprès des collaborateurs.</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div class="timeline-title">Stagiaire IT — Réseaux & Opérations</div>
-                        <div class="timeline-date">Juin – Août 2024</div>
-                    </div>
-                    <div class="timeline-company">Megasoft · Yaoundé</div>
-                    <div class="timeline-desc">Diagnostic réseaux LAN/WAN, gestion des droits utilisateurs (Active
-                        Directory), résolution d'incidents N2/N3, surveillance opérationnelle et optimisation des
-                        procédures internes.</div>
+                <div class="timeline-header">
+                    <div class="timeline-title">Stagiaire IT — Réseaux & Opérations</div>
+                    <div class="timeline-date">Juin – Août 2024</div>
                 </div>
+                <div class="timeline-company">Megasoft · Yaoundé</div>
+                <div class="timeline-desc">Diagnostic réseaux LAN/WAN, gestion des droits utilisateurs (Active
+                    Directory), résolution d'incidents N2/N3, surveillance opérationnelle et optimisation des procédures
+                    internes.</div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-        <div class="section-title"><span>Contact</span></div>
-        <div class="divider"></div>
         <div class="contact-card">
+            <h3>Travaillons ensemble 🚀</h3>
             <p>Disponible pour une alternance de 24 mois dès septembre 2026 — Mobile toute la France</p>
             <div class="contact-links">
                 <a href="mailto:atsabridget9@gmail.com" class="contact-link">📧 atsabridget9@gmail.com</a>
